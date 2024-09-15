@@ -28,6 +28,10 @@
         <None Include="../../../README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+      <PackageReference Include="System.Collections.Immutable" />
+    </ItemGroup>
+
     <!-- T4 Template -->
     <ItemGroup>
         <Compile Update="Internals\UnderlyingOperation.cs">
